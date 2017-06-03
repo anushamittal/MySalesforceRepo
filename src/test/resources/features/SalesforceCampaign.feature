@@ -7,7 +7,7 @@ Feature: Salesforce Campaign configuration
 
     Given I am existing user of salesforce with access <accesstype>
     When I login and create a campaign for my company
-    Then I enter demo firstname, demoo lastname, abc company name and 7 number of employees
+    Then I enter firstname, lastname, abc company name and 7 number of employees
     Then a campaign is successfully created
     And I can see the success message
 

@@ -1,5 +1,6 @@
 package pageobjects;
 
+import Helper.RandomNameGenerator;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.SelenideElement;
@@ -16,10 +17,10 @@ public class LeadsPage {
     private String FName, LName, CompanyName, number;
 
 
-    @FindBy(how = How.XPATH, using = "//a[@title='Leads Tab']")
+    @FindBy(how = How.XPATH, using = ".//*[@id='Lead_Tab']/a")//a[@title='Leads Tab']
     SelenideElement LeadsTab;
 
-    @FindBy(how = How.XPATH, using ="//input[@title='New']")
+    @FindBy(how = How.XPATH, using ="//input[@title='New']")//input[@title='New']
     SelenideElement NewLead;
 
     /*@FindBy(how= How.XPATH,using = "//select[@id='lea13']")
@@ -50,27 +51,29 @@ public class LeadsPage {
     SelenideElement save;
 
     public void createNewLead() throws InterruptedException {
+        //LeadsTab.shouldHave(Condition.text("Leads"));
         LeadsTab.click();
-        LeadsTab.shouldHave(Condition.text("Leads"));
+
         //Configuration.timeout= 5000;
+        //NewLead.shouldHave(Condition.text("New"));
         NewLead.click();
-        NewLead.shouldHave(Condition.text("New"));
-        Configuration.timeout= 5000;
+
+       // Configuration.timeout= 5000;
 
 
         // public void chnagewindow(){
         //switchTo().window("Create Lead");
     }
 
-        public void formfill(String FName ,String LName , String CompanyName, String number){
+        public void formfill(String CompanyName, String number){
 
 
             /*status.click();
             status.selectOptionByValue("Quaified");*/
             salutation.selectOptionByValue("Mr.");
-            this.FName= FName;
+            this.FName= new RandomNameGenerator().generateName();
             firstName.val(FName);
-            this.LName= LName;
+            this.LName= new RandomNameGenerator().generateName();
             lastName.val(LName);
             rating.selectOptionByValue("Hot");
 

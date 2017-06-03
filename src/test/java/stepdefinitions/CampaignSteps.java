@@ -4,11 +4,15 @@ import com.codeborne.selenide.Configuration;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import io.restassured.response.Response;
+import org.junit.After;
+import org.junit.Before;
 import pageobjects.CampaignPage;
 import pageobjects.LeadsPage;
 
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.page;
+import static io.restassured.RestAssured.get;
 /*
 *
  * Created by Swarn on 5/16/2017.*/
@@ -23,16 +27,15 @@ public class CampaignSteps {
 
     }
 
+
     @Given("^I am existing user of salesforce with access (.*)$")
-    public void I_am_existing_user_of_salesforce_with_access (String str)throws Throwable {
-
-
-System.setProperty("webdriver.gecko.driver","C:\\Users\\Swarn\\Downloads\\salesforce-master\\salesforce-master\\SelenideTest\\src\\test\\resources\\geckodriver.exe");
-        Configuration.browser="FIREFOX";
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Swarn\\Downloads\\sel\\chromedriver.exe");
-        Configuration.browser = "Chrome";
-        CampaignPage page = open("https://login.salesforce.com/", CampaignPage.class);
-        page.loginAsUser(str);
+    public void I_am_existing_user_of_salesforce_with_access (String user)throws Throwable {
+        //System.setProperty("webdriver.gecko.driver","C:\\Users\\Swarn\\Downloads\\salesforce-master\\salesforce-master\\SelenideTest\\src\\test\\resources\\geckodriver.exe");
+        //Configuration.browser="FIREFOX";
+    /*    System.setProperty("webdriver.chrome.driver", "C:\\Users\\Swarn\\Downloads\\sel\\chromedriver.exe");
+        Configuration.browser = "Chrome"; */
+        CampaignPage page = page(CampaignPage.class);
+        page.loginAsUser(user);
         // Express the Regexp above with the code you wish you had
 
     }
@@ -46,10 +49,10 @@ System.setProperty("webdriver.gecko.driver","C:\\Users\\Swarn\\Downloads\\salesf
 
     }
 
-    @Then("^I enter (.*) firstname, (.*) lastname, (.*) company name and (.*) number of employees$")
-    public void I_enter_firstname(String FName ,String LName , String CompanyName, String number) throws Throwable {
+    @Then("^I enter firstname, lastname, (.*) company name and (.*) number of employees$")
+    public void I_enter_firstname(String CompanyName, String number) throws Throwable {
         LeadsPage lead1 = page(LeadsPage.class);
-        lead1.formfill(FName,LName,CompanyName,number);
+        lead1.formfill(CompanyName,number);
 
         // Express the Regexp above with the code you wish you had
     }

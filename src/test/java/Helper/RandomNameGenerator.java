@@ -11,6 +11,7 @@ import java.util.Random;
 public class RandomNameGenerator {
 
     private char[] array = {'a', 'b', 'c'};
+    StringBuilder sb;
 
     private char getRanadomchar(){
         return array[random(array.length)];
@@ -19,12 +20,13 @@ public class RandomNameGenerator {
     private  int random(int length){
         return new Random().nextInt(length);
     }
-    protected RandomNameGenerator(){
+    public  String generateName(){
         boolean running = true;
+
         int count = 0;
-        int max= 5;
+        int max= 1;
         while(running){
-            StringBuilder sb = new StringBuilder();
+            sb = new StringBuilder();
             int size = random(3)+random(5);
             for(int i= 0;i < size; i++){
                 sb.append(getRanadomchar());
@@ -33,12 +35,17 @@ public class RandomNameGenerator {
             if(count++ == max){
                 running = false;
                 System.out.println("finished");
+
             }
 
         }
+        return sb.toString();
     }
     public static void main(String ar[]){
-        new RandomNameGenerator();
+
+        RandomNameGenerator rname =        new RandomNameGenerator();
+        String name = rname.generateName();
+        System.out.println(name);
     }
 
 }

@@ -63,7 +63,7 @@ public class AccountPage {
     @FindBy(how= How.XPATH, using = "//input[@id='acc17zip']")
     SelenideElement Zipcode;*/
 
-   // Filling up information for new account
+   // Filling up information for new
    public void AccountCreation
            (String AccName, String WWebsite, String ContactPhone, String NoofEmployees,String  AddressBillingStreet, String PostZipcode){
 

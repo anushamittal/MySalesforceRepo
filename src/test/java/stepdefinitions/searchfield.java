@@ -4,6 +4,7 @@ import com.codeborne.selenide.Configuration;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.junit.After;
 import pageobjects.CampaignPage;
 import pageobjects.Searchfield;
 
@@ -18,11 +19,12 @@ public class searchfield {
 
 
     @Given("^login to salesforce.com$")
-    public void login_to_salesforce_com() throws Throwable {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Swarn\\Downloads\\sel\\chromedriver.exe");
+
+    public void login_to_salesforce_com(String str) throws Throwable {
+/*        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Swarn\\Downloads\\sel\\chromedriver.exe");
         Configuration.browser = "Chrome";
         CampaignPage page = open("https://login.salesforce.com/", CampaignPage.class);
-        page.loginAsUser();
+        page.loginAsUser(str);*/
         // Express the Regexp above with the code you wish you had
 
     }

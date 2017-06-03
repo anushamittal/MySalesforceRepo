@@ -2,6 +2,7 @@ package pageobjects;
 
 import Helper.RandomNameGenerator;
 import com.codeborne.selenide.SelenideElement;
+import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -20,6 +21,7 @@ public class CampaignPage {
 
     @FindBy(how = How.XPATH,using= "//*[@id=\"Login\"]")
     SelenideElement loginbutton;
+
 
     public void loginAsUser(String accessType) {
 

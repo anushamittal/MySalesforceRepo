@@ -5,6 +5,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.junit.After;
 import pageobjects.CampaignPage;
 import pageobjects.DashboradPage;
 
@@ -16,13 +17,15 @@ import static com.codeborne.selenide.Selenide.page;
  */
 public class Dashboard {
 
+
+
     @Given("^login into salesforce$")
-    public void login_into_salesforce(String str1) throws Throwable {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Swarn\\Downloads\\sel\\chromedriver.exe");
+    public void login_into_salesforce(String str) throws Throwable {
+       /* System.setProperty("webdriver.chrome.driver", "C:\\Users\\Swarn\\Downloads\\sel\\chromedriver.exe");
         Configuration.browser = "Chrome";
         CampaignPage page = open("https://login.salesforce.com/", CampaignPage.class);
-        page.loginAsUser(str1);
-        Configuration.timeout=10000;
+        page.loginAsUser(str);
+        Configuration.timeout=10000;*/
         // Express the Regexp above with the code you wish you had
 
     }
