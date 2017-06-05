@@ -1,0 +1,3 @@
+Go to setup on your homepage, then Administrator settings on the left.
+Now go to "Manage Users" . Click "Login History" to view your login access .Check the attached screenshot - LoginHistory.
+Now go "Security Controls">"Network Access".Edit settings according to your ip address.
