@@ -94,8 +94,8 @@ public class Hooks
             case "ie":
 
                 System.out.println("Called openBrowser");
-                DesiredCapabilities capabilities = DesiredCapabilities.internetExplorer();
-                capabilities.setCapability(InternetExplorerDriver.IGNORE_ZOOM_SETTING, true);
+                //DesiredCapabilities capabilities = DesiredCapabilities.internetExplorer();
+               // capabilities.setCapability(InternetExplorerDriver.IGNORE_ZOOM_SETTING, true);
                 System.setProperty("webdriver.ie.driver", "C:\\Users\\Swarn\\Downloads\\Drivers\\IE\\IEDriverServer.exe");
                 open("/");
                 break;
