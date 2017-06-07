@@ -2,10 +2,10 @@
 <testng-results skipped="0" failed="0" total="0" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="stepdefinitions.RunCukesTest" duration-ms="5" started-at="2017-06-05T12:21:38Z" finished-at="2017-06-05T12:21:38Z">
+  <suite name="Surefire suite" duration-ms="61239" started-at="2017-06-07T09:11:03Z" finished-at="2017-06-07T09:12:04Z">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="5" started-at="2017-06-05T12:21:38Z" finished-at="2017-06-05T12:21:38Z">
-    </test> <!-- Command line test -->
-  </suite> <!-- stepdefinitions.RunCukesTest -->
+    <test name="Surefire test" duration-ms="61239" started-at="2017-06-07T09:11:03Z" finished-at="2017-06-07T09:12:04Z">
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
 </testng-results>

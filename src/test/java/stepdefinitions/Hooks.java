@@ -38,7 +38,7 @@ public class Hooks
     public void openBrowser() throws Throwable {
 
             //System.setProperty("webdriver.chrome.driver", "C:\\Users\\Swarn\\Downloads\\sel\\chromedriver.exe");
-            Configuration.browser = "firefox";
+            Configuration.browser = "Chrome";
             Configuration.baseUrl ="https://login.salesforce.com/";
           /*  CampaignPage page = open("https://login.salesforce.com/", CampaignPage.class);
             page.loginAsUser("csr");*/
