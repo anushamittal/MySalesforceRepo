@@ -32,21 +32,21 @@ public class CampaignPage {
         {
 
             case "csr":
-                username.setValue("swarn.3000@gmail.com");
-                password.setValue("Creative3498");
+                username.setValue("swarn.003@yahoo.com");
+                password.setValue("Demo@1234");
                 break;
             case "manager":
-                username.setValue("swarn.3000@gmail.com");
-                password.setValue("Creative3498");
+                username.setValue("swarn.003@yahoo.com");
+                password.setValue("Demo@1234");
                 break;
             case "ceo":
-                username.setValue("swarn.3000@gmail.com");
-                password.setValue("Creative3498");
+                username.setValue("swarn.003@yahoo.com");
+                password.setValue("Demo@1234");
                 break;
 
                 default:
-                    username.setValue("swarn.3000@gmail.com");
-                    password.setValue("Creative3498");
+                    username.setValue("swarn.003@yahoo.com");
+                    password.setValue("Demo@1234");
         }
         loginbutton.click();
     }
