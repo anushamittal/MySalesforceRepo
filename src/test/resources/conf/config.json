@@ -1,0 +1,17 @@
+{
+"server": "hub-cloud.browserstack.com",
+"user":"swarndeepsingh1",
+"key":"MdxJs1D3VjrQx5E7yFbt",
+
+"capabilities": {
+"project": "BrowserStack Selenide Project",
+"build": "Java Selenide Single",
+"browserstack.debug": true
+},
+
+"environments": {
+"chrome": {
+"browser": "chrome"
+}
+}
+}
