@@ -46,7 +46,8 @@ public class RandomNameGenerator {
         RandomNameGenerator rname =        new RandomNameGenerator();
         String name = rname.generateName();
         System.out.println(name);
-        
+        System.out.println("first commit on master");
+        System.out.println("first commit using branch");
     }
 
 }
