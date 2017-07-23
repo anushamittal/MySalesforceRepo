@@ -46,6 +46,7 @@ public class RandomNameGenerator {
         RandomNameGenerator rname =        new RandomNameGenerator();
         String name = rname.generateName();
         System.out.println(name);
+        
     }
 
 }
